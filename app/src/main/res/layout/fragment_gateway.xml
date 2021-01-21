@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen"
+    tools:context=".gateway.GatewayFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_clients"
+        style="@style/GatewayCard"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_default"
+        app:layout_constraintBottom_toTopOf="@id/card_sales_summary"
+        app:layout_constraintEnd_toStartOf="@id/card_requests"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_clients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_maxima_pessoas"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_clients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/santral_bold"
+                android:text="Clientes"
+                android:textColor="@color/text_color"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="@id/icon_clients"
+                app:layout_constraintStart_toStartOf="@id/icon_clients"
+                app:layout_constraintTop_toBottomOf="@id/icon_clients" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_requests"
+        style="@style/GatewayCard"
+        android:layout_marginEnd="@dimen/margin_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/card_clients"
+        app:layout_constraintTop_toTopOf="@id/card_clients">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_requests"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_maxima_pedido"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_requests"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/santral_bold"
+                android:text="Pedidos"
+                android:textColor="@color/text_color"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="@id/icon_requests"
+                app:layout_constraintStart_toStartOf="@id/icon_requests"
+                app:layout_constraintTop_toBottomOf="@id/icon_requests" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_sales_summary"
+        style="@style/GatewayCard"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_default"
+        app:layout_constraintBottom_toTopOf="@id/text_version"
+        app:layout_constraintEnd_toStartOf="@id/card_requests"
+        app:layout_constraintStart_toStartOf="@id/card_clients"
+        app:layout_constraintTop_toBottomOf="@id/card_clients">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_sales_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_maxima_resumo_vendas"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_sales_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/santral_bold"
+                android:text="Resumo de vendas"
+                android:textAlignment="center"
+                android:textColor="@color/text_color"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="@id/icon_sales_summary"
+                app:layout_constraintStart_toStartOf="@id/icon_sales_summary"
+                app:layout_constraintTop_toBottomOf="@id/icon_sales_summary" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_tools"
+        style="@style/GatewayCard"
+        android:layout_marginStart="@dimen/margin_default"
+        app:layout_constraintEnd_toEndOf="@id/card_requests"
+        app:layout_constraintStart_toEndOf="@id/card_sales_summary"
+        app:layout_constraintTop_toTopOf="@id/card_sales_summary">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_maxima_pessoas"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/santral_bold"
+                android:text="Clientes"
+                android:textColor="@color/text_color"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="@id/icon_tools"
+                app:layout_constraintStart_toStartOf="@id/icon_tools"
+                app:layout_constraintTop_toBottomOf="@id/icon_tools" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/text_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:fontFamily="@font/santral_bookitalic"
+        android:text="v.1.0.0"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/icon_internet"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon_internet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_maxima_nuvem_conectado"
+        app:layout_constraintBottom_toBottomOf="@id/text_version"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_version"
+        app:layout_constraintTop_toTopOf="@id/text_version" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
