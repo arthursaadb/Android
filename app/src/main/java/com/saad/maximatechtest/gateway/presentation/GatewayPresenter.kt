@@ -1,9 +1,12 @@
-package com.saad.maximatechtest.gateway
+package com.saad.maximatechtest.gateway.presentation
 
 import com.saad.maximatechtest.utils.ConnectionManager
 
-class GatewayPresenter(var view: GatewayContract.View?, val connectionManager: ConnectionManager) :
-    GatewayContract.Presenter {
+class GatewayPresenter(
+    var view: GatewayContract.View?,
+    private val connectionManager: ConnectionManager
+) : GatewayContract.Presenter {
+
     override fun onClickCardClients() {
 
     }

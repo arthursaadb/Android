@@ -1,4 +1,4 @@
-package com.saad.maximatechtest.gateway
+package com.saad.maximatechtest.gateway.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -70,14 +70,5 @@ class GatewayFragment : Fragment(), GatewayContract.View {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    companion object {
-        fun newInstance(param1: String, param2: String) =
-            GatewayFragment().apply {
-                arguments = Bundle().apply {
-
-                }
-            }
     }
 }

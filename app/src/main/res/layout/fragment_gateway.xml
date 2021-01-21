@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_screen"
-    tools:context=".gateway.GatewayFragment">
+    tools:context=".gateway.presentation.GatewayFragment">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_clients"

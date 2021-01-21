@@ -1,4 +1,4 @@
-package com.saad.maximatechtest.gateway
+package com.saad.maximatechtest.gateway.presentation
 
 interface GatewayContract {
 

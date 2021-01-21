@@ -17,4 +17,8 @@
 
     <!-- Gateway colors -->
     <color name="text_color">#232323</color>
+
+    <!-- Splash colors -->
+    <color name="gradient_start_color">#053F6A </color>
+    <color name="gradient_end_color">#186096</color>
 </resources>

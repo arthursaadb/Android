@@ -3,11 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/gatewayFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/gatewayFragment"
-        android:name="com.saad.maximatechtest.gateway.GatewayFragment"
+        android:name="com.saad.maximatechtest.gateway.presentation.GatewayFragment"
         android:label="fragment_gateway"
         tools:layout="@layout/fragment_gateway" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.saad.maximatechtest.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_gatewayFragment"
+            app:destination="@id/gatewayFragment" />
+    </fragment>
 </navigation>
