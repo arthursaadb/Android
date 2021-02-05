@@ -10,9 +10,9 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_clients"
         style="@style/GatewayCard"
-        android:layout_marginStart="@dimen/margin_default"
-        android:layout_marginEnd="@dimen/margin_default"
-        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
         app:layout_constraintBottom_toTopOf="@id/card_sales_summary"
         app:layout_constraintEnd_toStartOf="@id/card_requests"
         app:layout_constraintHorizontal_chainStyle="spread"
@@ -55,7 +55,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_requests"
         style="@style/GatewayCard"
-        android:layout_marginEnd="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/default_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/card_clients"
         app:layout_constraintTop_toTopOf="@id/card_clients">
@@ -94,8 +94,8 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_sales_summary"
         style="@style/GatewayCard"
-        android:layout_marginTop="@dimen/margin_default"
-        android:layout_marginEnd="@dimen/margin_default"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
         app:layout_constraintBottom_toTopOf="@id/text_version"
         app:layout_constraintEnd_toStartOf="@id/card_requests"
         app:layout_constraintStart_toStartOf="@id/card_clients"
@@ -137,7 +137,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_tools"
         style="@style/GatewayCard"
-        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginStart="@dimen/default_margin"
         app:layout_constraintEnd_toEndOf="@id/card_requests"
         app:layout_constraintStart_toEndOf="@id/card_sales_summary"
         app:layout_constraintTop_toTopOf="@id/card_sales_summary">
@@ -177,8 +177,8 @@
         android:id="@+id/text_version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_default"
-        android:layout_marginBottom="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/default_margin"
         android:fontFamily="@font/santral_bookitalic"
         android:text="v.1.0.0"
         android:textSize="24sp"

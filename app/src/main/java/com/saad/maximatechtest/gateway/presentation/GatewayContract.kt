@@ -3,7 +3,7 @@ package com.saad.maximatechtest.gateway.presentation
 interface GatewayContract {
 
     interface View {
-        fun goToClientData()
+        fun goToClient()
         fun goToRequests()
         fun goToSalesSummary()
         fun goToTools()

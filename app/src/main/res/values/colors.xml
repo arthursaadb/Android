@@ -15,10 +15,14 @@
     <color name="background_screen_with_cards">#F1F1F1</color>
     <color name="color_background_card">#FFFFFF</color>
 
-    <!-- Gateway colors -->
+    <!-- Gateway Fragment -->
     <color name="text_color">#232323</color>
 
-    <!-- Splash colors -->
+    <!-- Splash Fragment -->
     <color name="gradient_start_color">#053F6A </color>
     <color name="gradient_end_color">#186096</color>
+
+    <!-- Client Fragment -->
+    <color name="color_text_label">#95989A</color>
+    <color name="color_text_fantasy_name">#606060</color>
 </resources>

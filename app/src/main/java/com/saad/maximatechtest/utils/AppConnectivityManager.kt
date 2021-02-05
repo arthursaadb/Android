@@ -3,11 +3,11 @@ package com.saad.maximatechtest.utils
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
+import javax.inject.Inject
 
-class AppConnectivityManager(private val context: Context) : ConnectionManager {
+class AppConnectivityManager @Inject constructor(val connectivityManager: ConnectivityManager) : ConnectionManager {
     override fun isConnectionAvailable(): Boolean {
-        val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val activeNetwork: NetworkInfo? = cm.activeNetworkInfo
+        val activeNetwork: NetworkInfo? = connectivityManager.activeNetworkInfo
         return activeNetwork?.isConnected ?: false
     }
 }

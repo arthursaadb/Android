@@ -5,14 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.saad.maximatechtest.R
 import com.saad.maximatechtest.databinding.FragmentGatewayBinding
 import com.saad.maximatechtest.utils.AppConnectivityManager
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class GatewayFragment : Fragment(), GatewayContract.View {
+    @Inject lateinit var presenter: GatewayContract.Presenter
     private var _binding: FragmentGatewayBinding? = null
     private val binding get() = _binding!!
-    private lateinit var presenter: GatewayContract.Presenter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,15 +30,12 @@ class GatewayFragment : Fragment(), GatewayContract.View {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initPresenter()
         setupGatewayOptionsClick()
     }
 
-    private fun initPresenter() {
-        presenter = GatewayPresenter(this, AppConnectivityManager(requireContext()))
-    }
 
-    override fun goToClientData() {
+    override fun goToClient() {
+        view?.findNavController()?.navigate(R.id.action_gatewayFragment_to_dataClientFragment)
     }
 
     override fun goToRequests() {

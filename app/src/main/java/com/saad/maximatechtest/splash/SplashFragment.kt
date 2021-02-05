@@ -37,7 +37,7 @@ class SplashFragment : Fragment() {
 
     private fun animateImage() {
         val alphaAnimator = ValueAnimator.ofFloat(0f, 1f).apply {
-            duration = 2000
+            duration = TIME_LOGO_ANIMATION
         }
 
         alphaAnimator.addUpdateListener {
@@ -56,5 +56,9 @@ class SplashFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    companion object {
+        private const val TIME_LOGO_ANIMATION = 2000L
     }
 }

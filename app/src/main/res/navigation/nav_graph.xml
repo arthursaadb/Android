@@ -9,14 +9,42 @@
         android:id="@+id/gatewayFragment"
         android:name="com.saad.maximatechtest.gateway.presentation.GatewayFragment"
         android:label="fragment_gateway"
-        tools:layout="@layout/fragment_gateway" />
+        tools:layout="@layout/fragment_gateway">
+        <action
+            android:id="@+id/action_gatewayFragment_to_dataClientFragment"
+            app:destination="@id/dataClientFragment" />
+        <action
+            android:id="@+id/action_gatewayFragment_to_orderHistoryFragment"
+            app:destination="@id/orderHistoryFragment" />
+        <action
+            android:id="@+id/action_gatewayFragment_to_charterFragment"
+            app:destination="@id/charterFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.saad.maximatechtest.splash.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
+        tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/action_splashFragment_to_gatewayFragment"
             app:destination="@id/gatewayFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/dataClientFragment"
+        android:name="com.saad.maximatechtest.client.presentation.ClientFragment"
+        android:label="fragment_data_client"
+        tools:layout="@layout/fragment_client" />
+
+    <fragment
+        android:id="@+id/orderHistoryFragment"
+        android:name="com.saad.maximatechtest.orderhistory.OrderHistoryFragment"
+        android:label="OrderHistoryFragment" />
+
+    <fragment
+        android:id="@+id/charterFragment"
+        android:name="com.saad.maximatechtest.charter.CharterFragment"
+        android:label="fragment_charter"
+        tools:layout="@layout/fragment_charter" />
 </navigation>
